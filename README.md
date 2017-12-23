@@ -5,7 +5,7 @@ Download
 </br>
 npm install 
 </br>
-RUN THIS IS CMD in the folder: 
+RUN THIS IN CMD in the folder: 
 </br>
 python -m SimpleHTTPServer 8000  
 </br>
