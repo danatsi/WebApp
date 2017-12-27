@@ -14,18 +14,44 @@
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
     <script src="./node_modules/angular-animate/angular-animate.min.js"></script>
     <script src="./node_modules/angular-aria/angular-aria.min.js"></script>
+    <script src="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.3/angular-material.js"></script>
+
+
+    <!-- Material Design icon font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
+
+    <link rel="stylesheet" href="pages/home/home.css">
+    <link rel="stylesheet" href="pages/authentication/authentication.css">
 
     <script src="app.js"></script>
+    <script src="pages/authentication/register/register.controller.js"></script>
 
-    <script src="pages/Login/login.controller.js"></script>
-    <script src="pages/Home/home.controller.js"></script>
-    <script src="pages/Students/students.controller.js"></script>
-    <script src="pages/Users/users.controller.js"></script>
+    <script src="pages/authentication/login/login.controller.js"></script>
+    <script src="pages/home/home.controller.js"></script>
+    <script src="pages/students/students.controller.js"></script>
+    <script src="pages/users/users.controller.js"></script>
 
 
 </head>
 <body>
 
+<!--<header class="mdc-toolbar mdc-toolbar--fixed">
+    <div class="mdc-toolbar__row toolB" >
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+            <span class="mdc-toolbar__title">Classify!</span>
+        </section>
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
+            <a class="material-icons mdc-toolbar__icon" href="#/" aria-label="Home" >Home</a>
+            <a class="material-icons mdc-toolbar__icon" href="#/login" aria-label="Login">Login</a>
+            <a class="material-icons mdc-toolbar__icon" href="#/students" aria-label="students">students</a>
+            <a class="material-icons mdc-toolbar__icon" href="#/users" aria-label="users">users</a>
+        </section>
+    </div>
+</header>
+-->
 
 <header>
     <nav class="navbar navbar-default">
@@ -42,6 +68,7 @@
         </div>
     </nav>
 </header>
+
 
 <!-- MAIN CONTENT AND INJECTED VIEWS -->
 <div id="main">

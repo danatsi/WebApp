@@ -12,25 +12,31 @@ var MyApp = angular.module('MyApp', ["ngRoute", "ngMaterial"])
 
         // route for the home page
             .when('/', {
-                templateUrl : 'pages/Home/home.html',
-                controller  : 'home.controller'
+                templateUrl : 'pages/home/home.html',
+                controller  : 'HomeController'
             })
             .when('/login',
                 {
 
-                    templateUrl : 'pages/Login/login.html',
-                    controller  : 'login.controller'
+                    templateUrl : 'pages/authentication/login/login.html',
+                    controller  : 'LoginController'
                 })
+
+            // route for the contact page
+            .when('/register', {
+                templateUrl : 'pages/authentication/register/register.html',
+                controller  : 'RegisterController'
+            })
             // route for the about page
             .when('/students', {
-                templateUrl : 'pages/Students/students.html',
-                controller  : 'students.controller'
+                templateUrl : 'pages/students/students.html',
+                controller  : 'StudentsController'
             })
 
             // route for the contact page
             .when('/users', {
-                templateUrl : 'pages/Users/users.html',
-                controller  : 'users.controller'
+                templateUrl : 'pages/users/users.html',
+                controller  : 'UsersController'
             });
     })
 
