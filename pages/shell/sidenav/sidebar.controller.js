@@ -4,14 +4,14 @@
 'use strict';
 
 angular.module('MyApp')
-    .controller('SidebarController', function ($scope, $rootScope, $mdSidenav, $mdDialog, Auth, $state) {
+    .controller('SidebarController', function ($scope, $rootScope, $mdSidenav, $mdDialog,  $state) {
         $scope.logout = function () {
             Auth.logout();
         };
 
-        $scope.loggedInUser = Auth.getCurrentUser();
+       // $scope.loggedInUser = Auth.getCurrentUser();
 
-        var menuList = [{
+         $scope.menuList = [{
             text: 'Home',
             state: 'shell.home',
             iconClass: 'home'
@@ -23,10 +23,6 @@ angular.module('MyApp')
             text: 'Students',
             state: 'shell.students',
             iconClass: 'students'
-        }, {
-            text: 'Students',
-            state: 'shell.students',
-            iconClass: 'account-multiple'
         }, {
             text: 'Schools',
             state: 'shell.schools',
@@ -45,10 +41,10 @@ angular.module('MyApp')
             iconClass: 'account'
         }];
 
-        $scope.navList = _.filter(navList, function (item) {
-            var role = ($state.get(item.state).data || {}).requiredRole;
-            return role ? Auth.hasRole(role) : true;
-        });
+      /*  $scope.navList = _.filter(navList, function () {
+          //  var role = ($state.get(item.state).data || {}).requiredRole;
+            return  true;
+        });*/
 
         $scope.toggleMenu = function () {
             $mdSidenav('sideNav').toggle();

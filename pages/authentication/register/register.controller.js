@@ -32,4 +32,4 @@ angular.module('MyApp').controller('RegisterController', function($scope,$http)
 
         $scope.signupForm.passwordValidate.$setValidity('notEqual', pasValid);
     };
-}
+});

@@ -9,12 +9,6 @@ angular.module('MyApp')
             .state('shell', {
                 abstract: true,
                 templateUrl: 'pages/shell/shell.html',
-                resolve:
-                    {
-                        loggedIn : function (Auth)
-                        {
-                            return Auth.getCurrentUser().$promise;
-                        }
-                    }
+
             });
     });

@@ -2,41 +2,20 @@
 //var ctrlogin = required('/api/controllers/login.controller.js');
 
 // create the module and name it scotchApp
-var MyApp = angular.module('MyApp', ["ngRoute", "ngMaterial"])
+var MyApp = angular.module('MyApp', ["ui.router", "ngMaterial","angular-hamburglar"])
+
+
 
 // configure our routes
-    .config(function($routeProvider, $locationProvider)
+    .config(function($stateProvider,$locationProvider,$urlRouterProvider)
     {
-        $locationProvider.hashPrefix('');
-        $routeProvider
+        $urlRouterProvider
+            .otherwise('/');
+        $stateProvider.state('shell.home',{
+            url:'/',
+            templateUrl:'pages/Home/home.html',
+            controller:'HomeController'
+        })
 
-        // route for the home page
-            .when('/', {
-                templateUrl : 'pages/home/home.html',
-                controller  : 'HomeController'
-            })
-            .when('/login',
-                {
-
-                    templateUrl : 'pages/authentication/login/login.html',
-                    controller  : 'LoginController'
-                })
-
-            // route for the contact page
-            .when('/register', {
-                templateUrl : 'pages/authentication/register/register.html',
-                controller  : 'RegisterController'
-            })
-            // route for the about page
-            .when('/students', {
-                templateUrl : 'pages/students/students.html',
-                controller  : 'StudentsController'
-            })
-
-            // route for the contact page
-            .when('/users', {
-                templateUrl : 'pages/users/users.html',
-                controller  : 'UsersController'
-            });
     })
 

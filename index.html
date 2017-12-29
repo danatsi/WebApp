@@ -1,6 +1,6 @@
 <!-- index.html -->
 <!DOCTYPE html>
-<html ng-app="MyApp">
+<html ng-app="MyApp" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +8,10 @@
     <!-- SCROLLS -->
     <!-- load angular and angular route via CDN -->
 
-    <script src="./node_modules/angular/angular.min.js"></script>
+    <script src="./node_modules/angular/angular.js"></script>
+    <script src="./node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
     <link rel="stylesheet" href="./node_modules/angular-material/angular-material.min.css">
-    <script src="./node_modules/angular-material/angular-material.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script src="./node_modules/angular-material/angular-material.js"></script>
     <script src="./node_modules/angular-animate/angular-animate.min.js"></script>
     <script src="./node_modules/angular-aria/angular-aria.min.js"></script>
     <script src="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.3/angular-material.js"></script>
@@ -22,22 +22,30 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
+    <script type="text/javascript" src="./bower_components/angular-hamburglar/dist/hamburglar.js"></script>
 
     <link rel="stylesheet" href="pages/home/home.css">
     <link rel="stylesheet" href="pages/authentication/authentication.css">
+    <link rel="stylesheet" href="./bower_components/angular-hamburglar/dist/hamburglar.css">
 
     <script src="app.js"></script>
     <script src="pages/authentication/register/register.controller.js"></script>
 
+
+    <script src="pages/shell/shell.js"></script>
+    <script src="pages/shell/sidenav/sidebar.controller.js"></script>
+    <script src="pages/shell/toolbar/toolbar.controller.js"></script>
     <script src="pages/authentication/login/login.controller.js"></script>
     <script src="pages/home/home.controller.js"></script>
     <script src="pages/students/students.controller.js"></script>
     <script src="pages/users/users.controller.js"></script>
+    <script src="pages/Students/students.js"></script>
 
 
 </head>
-<body>
+<body style="direction: ltr;">
 
+<ui-view style="display: flex; flex-direction: column; height: 100%;"></ui-view>
 <!--<header class="mdc-toolbar mdc-toolbar--fixed">
     <div class="mdc-toolbar__row toolB" >
         <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
@@ -53,27 +61,8 @@
 </header>
 -->
 
-<header>
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <md-toolbar>
-                Classify!
-            </md-toolbar>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#/"><i class="fa fa-home"></i>Home</a></li>
-                <li><a href="#/login"><i class="fa fa-shield"></i> Login</a></li>
-                <li><a href="#/students"><i class="fa fa-comment"></i> students</a></li>
-                <li><a href="#/users"><i class="fa fa-comment"></i> users</a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
 
 
-<!-- MAIN CONTENT AND INJECTED VIEWS -->
-<div id="main">
-    <div ng-view></div>
-</div>
 
 </body>
 </html>
