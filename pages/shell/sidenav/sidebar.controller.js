@@ -10,7 +10,7 @@ angular.module('MyApp')
         };
 
        // $scope.loggedInUser = Auth.getCurrentUser();
-
+        $scope.loggedInUser = "Hello!";
          $scope.menuList = [{
             text: 'Home',
             state: 'shell.home',
@@ -23,22 +23,6 @@ angular.module('MyApp')
             text: 'Students',
             state: 'shell.students',
             iconClass: 'students'
-        }, {
-            text: 'Schools',
-            state: 'shell.schools',
-            iconClass: 'settings'
-        }, {
-            text: 'Managers',
-            state: 'shell.managers',
-            iconClass: 'settings'
-        }, {
-            text: 'Teachers',
-            state: 'shell.teachers',
-            iconClass: 'settings'
-        }, {
-            text: 'Profile',
-            state: 'shell.profile',
-            iconClass: 'account'
         }];
 
       /*  $scope.navList = _.filter(navList, function () {
