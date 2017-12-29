@@ -23,7 +23,12 @@ angular.module('MyApp')
             text: 'Students',
             state: 'shell.students',
             iconClass: 'students'
-        }];
+        },
+             {
+                 text: 'Login',
+                 state: 'login',
+                 iconClass: 'login'
+             }];
 
       /*  $scope.navList = _.filter(navList, function () {
           //  var role = ($state.get(item.state).data || {}).requiredRole;

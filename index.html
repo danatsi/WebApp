@@ -23,10 +23,15 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
     <script type="text/javascript" src="./bower_components/angular-hamburglar/dist/hamburglar.js"></script>
+    <script type="text/javascript" src="./node_modules/angular-material-data-table/dist/md-data-table.js"></script>
+    <script type="text/javascript" src="./node_modules/angular-fixed-table-header/src/fixed-table-header.js"></script>
+
 
     <link rel="stylesheet" href="pages/home/home.css">
     <link rel="stylesheet" href="pages/authentication/authentication.css">
     <link rel="stylesheet" href="./bower_components/angular-hamburglar/dist/hamburglar.css">
+    <link rel="stylesheet" href="./node_modules/angular-material-data-table/dist/md-data-table.min.css">
+    <link rel="stylesheet" href="./pages/Students/students.css">
 
     <script src="app.js"></script>
     <script src="pages/authentication/register/register.controller.js"></script>
@@ -37,6 +42,7 @@
     <script src="pages/shell/toolbar/toolbar.controller.js"></script>
     <script src="pages/authentication/login/login.controller.js"></script>
     <script src="pages/home/home.controller.js"></script>
+    <script src="pages/home/home.js"></script>
     <script src="pages/students/students.controller.js"></script>
     <script src="pages/users/users.controller.js"></script>
     <script src="pages/users/users.js"></script>
@@ -44,7 +50,7 @@
 
 
 </head>
-<body style="direction: ltr;">
+<body style="direction: ltr; padding-right: 0px !important;">
 
 <ui-view style="display: flex; flex-direction: column; height: 100%; "></ui-view>
 <!--<header class="mdc-toolbar mdc-toolbar--fixed">

@@ -2,7 +2,7 @@
 //var ctrlogin = required('/api/controllers/login.controller.js');
 
 // create the module and name it scotchApp
-var MyApp = angular.module('MyApp', ["ui.router", "ngMaterial","angular-hamburglar"])
+var MyApp = angular.module('MyApp', ["ui.router", "ngMaterial","angular-hamburglar","md.data.table","fixed.table.header"])
 
 
 
@@ -11,10 +11,10 @@ var MyApp = angular.module('MyApp', ["ui.router", "ngMaterial","angular-hamburgl
     {
         $urlRouterProvider
             .otherwise('/');
-        $stateProvider.state('shell.home',{
+        $stateProvider.state('login',{
             url:'/',
-            templateUrl:'pages/Home/home.html',
-            controller:'HomeController'
+            templateUrl:'pages/authentication/login/login.html',
+            controller:'LoginController'
         })
 
     })

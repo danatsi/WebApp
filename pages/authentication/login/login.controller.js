@@ -23,7 +23,7 @@ angular.module('MyApp').controller('LoginController', function($scope,$location,
 
         // checking if there is user By that name
        var user  =  _.find( $scope.usersLoginData, function(o) { if(o.userid ==$scope.userid){ return o;} else{return null;} });
-
+        $location.path("/home");
 
        if(user== null )
        {

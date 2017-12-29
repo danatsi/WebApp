@@ -1,8 +1,20 @@
 /**
  * Created by Noy Yizchaki on 12/24/2017.
  */
-angular.module('MyApp').controller('StudentsController', function($scope, $http) {
+angular.module('MyApp')
+    .controller('StudentsController', function($scope, $http) {
 
+        $scope.options = {
+            rowSelection: true,
+            multiSelect: true,
+            autoSelect: true,
+            decapitate: false,
+            largeEditDialog: false,
+            boundaryLinks: false,
+            limitSelect: true,
+            pageSelect: true
+        };
+        $scope.selected = [];
     // create a message to display in our view
     $scope.message = 'Look! I am an about page.';
     // create a message to display in our view
@@ -18,4 +30,17 @@ angular.module('MyApp').controller('StudentsController', function($scope, $http)
         console.log(response);
 
     })
-});
+    $scope.query = {
+        order: 'name',
+        limit: 20,
+        page: 1
+    };
+        $scope.logPagination = function (page, limit) {
+            console.log('page: ', page);
+            console.log('limit: ', limit);
+        }
+
+            $scope.limitOptions = [20, 40, 50, 10000];
+
+
+    });
