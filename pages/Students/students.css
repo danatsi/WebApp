@@ -1,4 +1,4 @@
-body,
+.students-page body,
 md-table-container td,
 md-table-container th {
     direction: ltr;
@@ -6,38 +6,38 @@ md-table-container th {
     padding-right: 40px !important;
 }
 
-md-content {
+.students-page md-content {
     background-color: #f5f5f5 !important;
 }
 
-body>md-toolbar {
+.students-page body>md-toolbar {
     z-index: 3;
 }
 
-md-toolbar.md-table-toolbar.alternate {
+.students-page md-toolbar.md-table-toolbar.alternate {
     color: #1e88e5;
     background-color: #e3f2fd;
 }
 
-md-toolbar.md-table-toolbar.alternate .md-toolbar-tools {
+.students-page md-toolbar.md-table-toolbar.alternate .md-toolbar-tools {
     font-size: 16px;
 }
 
-md-card:first-child {
+.students-page md-card:first-child {
     padding: 8px 8px 8px 24px;
 }
 
-.checkboxes>md-checkbox {
+.students-page .checkboxes>md-checkbox {
     margin: 0;
     padding: 16px;
     min-width: 300px;
     flex: 0 0 auto;
 }
-table.clone thead tr:last-child th {
+.students-page table.clone thead tr:last-child th {
     border-bottom: 1px rgba(0, 0, 0, 0.12) solid;
 }
 
-table.clone + md-table-container table tbody tr:first-child td {
+.students-page table.clone + md-table-container table tbody tr:first-child td {
     border-top: none;
 }
 
