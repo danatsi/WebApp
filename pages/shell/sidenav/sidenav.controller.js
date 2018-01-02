@@ -14,7 +14,7 @@ angular.module('MyApp')
         // getting the current user json object
        var loggedInUser =  $auth.currentUser().$$state.value;
 
-        $scope.loginMessage = "Hello! " + loggedInUser.firstName + loggedInUser.lastName;
+        $scope.loginMessage = "Hello! " + loggedInUser.firstName +  "  " +loggedInUser.lastName;
          $scope.menuList = [{
             text: 'Home',
             state: 'shell.home',

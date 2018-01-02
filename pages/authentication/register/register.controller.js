@@ -23,7 +23,6 @@ angular.module('MyApp').controller('RegisterController', function($scope,$http,$
         }
 
         $scope.registerForm.passwordValidate.$setValidity('notEqual', pasValid);
-        $scope.registerForm.passwordValidate.$setValidity('required', false);
 
     };
 
