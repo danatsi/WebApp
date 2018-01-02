@@ -1,20 +1,42 @@
 /**
+ * Created by Noy Yizchaki on 12/30/2017.
+ */
+/**
  * Created by danatsirulnik on 30/12/2017.
  */
-angular.module('MyApp').factory('$auth', function ($q) {
+angular.module('MyApp').factory('$auth', function ($q, $location,$http) {
     var auth = {};
     var currentUser ;
+    var usersLoginData = null;
 
-    auth.isLoggedIn = function () {
-        return $q(function (resolve, reject) {
-            resolve(true);
-        });
+
+    // getting the data of the users
+    $http.get('pages/Authentication/user-data.json').then(function (success) {
+            usersLoginData = success.data;
+        }
+    , function (error) {
+    });
+
+    // login the user if correct
+    auth.isLoggedIn = function ()
+    {
+        return $q(function (resolve, reject)
+        {
+               if(currentUser){
+                   resolve(true);
+               }
+               else {
+                   reject("No user");
+               }
+         });
     };
 
+    //
     auth.currentUser = function () {
         console.log(currentUser);
         return $q(function (resolve, reject) {
-            if (currentUser){
+            if (currentUser!= null)
+            {
                 return resolve(currentUser);
             }
             else{
@@ -23,18 +45,91 @@ angular.module('MyApp').factory('$auth', function ($q) {
         });
     };
 
-    auth.login = function (userName, password) {
-        //Send request to server.
-        return $q(function (resolve, reject) {
-            if (userName == "admin" && password =='1234'){
-                currentUser = "admin";
-                return resolve ();
-            }
-            else {
-                return reject ("YOU ARE WRONG! USER NAME IS admin PASS is 1234")
-            }
+    //
+    auth.login = function (user)
+    {
+        return $q(function (resolve, reject)
+        {
+           if(usersLoginData!= null)
+            {
+                // checking if there is user By that name
+                var foundUser = _.find(usersLoginData, function (o) {
+                    if (o.userid == user.userid)
+                    {
+                        return o;
+                    } else {
+                        return null;
+                    }
+                });
+
+                if (foundUser == null)
+                {
+                    return reject("user name doesnt exist");
+                }
+                else if (foundUser.password ==user.password)
+                {
+                    currentUser = foundUser;
+
+                    $location.path("/home");
+
+                    return resolve('Logged in!');
+                }
+                else {
+                    return reject ("Wrong Password")
+                }
+             }
+
         });
     };
+
+    //
+    auth.register = function(user)
+    {
+        return $q(function (resolve, reject)
+        {
+              // checking if there is user By that name
+                var foundUser = _.find(usersLoginData, function (o) {
+                    if (o.userid == user.userid)
+                    {
+                        return o;
+                    } else {
+                        return null;
+                    }
+                });
+
+                if (foundUser != null)
+                {
+                    return reject("user already exist");
+                }
+                else
+                {
+                    var json = JSON.stringify(user);
+
+                     usersLoginData.push(user);
+                    currentUser = user;
+                    $location.path("/home");
+                    return resolve('Registered!');
+
+
+                }
+        });
+
+    }
+
+    auth.logout = function () {
+
+        currentUser = "";
+
+        return $q(function (resolve, reject)
+        {
+            $location.path("/login");
+            return resolve();
+
+        });
+
+    }
+
+
 
 
     return auth;

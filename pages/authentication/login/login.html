@@ -1,25 +1,28 @@
 <div class="mdc-card" >
     <section class="mdc-card__primary">
-        <h1 class="mdc-card__title mdc-card__title--large">Login Screen </h1>
-        <p>{{ message }} USER IS admin PASS is 1234</p>
+        <h1 class="mdc-card__title mdc-card__title--large authTitle">Login Screen </h1>
     </section>
     <section class="mdc-card__supporting-text" >
 
         <div ng-show="error" class="alert alert-danger">{{error}}</div>
-        <form name="loginForm" ng-submit="appLogin()" role="form">
+        <form name="loginForm" class="authForm" ng-submit="appLogin()" role="form">
+
             <div class="group" >
                 <i class="fa fa-key"></i>
-                <input type="text" name="userid" id="userid" class="form-control" ng-model="userid" required />
+                <input type="text" name="userid" id="userid" class="form-control" ng-model="user.userid" required />
                 <span class="highlight" ></span><span class="bar" ></span>  <label for="userid">User ID</label>
                 <span ng-show="loginForm.userid.$dirty && loginForm.userid.$error.required" class="help-block">User ID required</span>
             </div>
             <div class="group">
                 <i class="fa fa-lock"></i>
-                <input type="password" name="password" id="password" class="form-control" ng-model="password" required />
+                <input type="password" name="password" id="password" class="form-control" ng-model="user.password" required />
                 <span class="highlight" required></span><span class="bar"></span>
                 <label for="password">Password</label>
 
                 <span ng-show="loginForm.password.$dirty && loginForm.password.$error.required" class="help-block">Password required </span>
+
+                <p class="authMess">{{ message }}</p>
+
             </div>
             <div class="form-actions">
                 <button  type="submit" ng-disabled="loginForm.$invalid ||loginForm.password.$error.required || loginForm.userid.$error.required" class="button buttonBlue">Login</button>

@@ -3,7 +3,7 @@
 
 <p>{{ message }}</p>
 
-<div class="students-page">
+
 <md-content layout="column" flex>
 
         <md-table-container>
@@ -21,13 +21,8 @@
                 </thead>
                 <tbody md-body>
                 <tr md-row md-select="student" md-select-id="name.first" md-auto-select ng-repeat="student in studentList | limitTo: query.limit : (query.page -1) * query.limit">
-                    <td  ng-model="studemt.name.first"
-                         md-cell
-                         ng-click="editComment($event, student)">
-                        {{ student.name.first }}
-                    </td>
+                    <td md-cell>{{ student.name.first }}</td>
                     <td md-cell>{{ student.name.last}}</td>
-                    <td md-cell>{{ avgGrade() }}</td>
                 </tr>
 
                 </tbody>
@@ -36,7 +31,6 @@
         <md-table-pagination md-limit="query.limit" md-limit-options=limitOptions md-page="query.page" md-total="{{studentList.length}}"
                              md-page-select="options.pageSelect" md-boundary-links="options.boundaryLinks"
                              md-on-paginate="logPagination"></md-table-pagination>
-
+   
 
 </md-content>
-</div>
