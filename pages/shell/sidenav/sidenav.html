@@ -1,4 +1,4 @@
-<div ng-controller="SidebarController" layout="column" flex class="sidenav">
+<div ng-controller="SidenavController" layout="column" flex class="sidenav">
 
     <md-toolbar class="md-tall md-hue-2 user-cover" layout="row" layout-align="start end">
         <div class="md-toolbar-tools" >
@@ -6,7 +6,7 @@
                 <i class="mdi mdi-account-circle" md-colors="{color: 'grey-A100-0.7'}"></i>
             </div>
             <h2>
-                {{ loggedInUser }}
+                {{ loginMessage }}
             </h2>
         </div>
     </md-toolbar>
@@ -23,10 +23,10 @@
         </md-list>
         <md-divider></md-divider>
         <md-list>
-            <md-list-item ng-click="logout()">
+            <md-list-item ng-click="logoutH()">
                 <div layout="row" layout-align="center center">
                     <i class="mdi mdi-logout" flex="25"></i>
-                    <span flex>יציאה</span>
+                    <span flex>logout</span>
                 </div>
             </md-list-item>
         </md-list>

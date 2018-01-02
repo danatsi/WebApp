@@ -2,34 +2,29 @@
  * Created by Noy Yizchaki on 12/27/2017.
  */
 
-angular.module('MyApp').controller('RegisterController', function($scope,$http)
+angular.module('MyApp').controller('RegisterController', function($scope,$http,$state,$auth)
 {
     $scope.message = " ";
     $scope.error = " ";
 
-    // getting the json data
-    $http.get('pages/Authentication/data.json').then(function (success) {
-            $scope.usersLoginData = success.data;
-            $scope.message = "Loaded users";
-        }
-        , function (error) {
-            $scope.usersLoginData = error;
-            $scope.error = "failed to load users";
-        });
-
     $scope.appRegister = function () {
-        $scope.message = 'Register !';
+        var result =  $auth.register($scope.user);
 
+        $scope.message = result.$$state.value;
     };
 
+    // validate in the form level the confirmed password
     $scope.validatePassword = function()
     {
         var pasValid = true;
 
-        if ($scope.user.passwordValidate !== $scope.user.password){
+        if (($scope.user.passwordValidate !== $scope.user.password) &&($scope.registerForm.passwordValidate.$touched)){
             pasValid = false;
         }
 
-        $scope.signupForm.passwordValidate.$setValidity('notEqual', pasValid);
+        $scope.registerForm.passwordValidate.$setValidity('notEqual', pasValid);
+        $scope.registerForm.passwordValidate.$setValidity('required', false);
+
     };
+
 });

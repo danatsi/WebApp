@@ -8,8 +8,8 @@ and open the template in the editor.
     Author     : Noy Yizchaki
 */
 
-
-
+.authTitle  {text-align: center;}
+.authMess  {text-align: center;}
 hgroup {
     text-align:center;
     margin-top: 4em;
@@ -19,12 +19,13 @@ h1, h3 { font-weight: 300;
     color: #636363;}
 
 
-form {
+.authForm {
     width: 380px;
     margin: 4em auto;
     padding: 3em 2em 2em 2em;
     background: #fafafa;
     border: 1px solid #ebebeb;
+    direction: rtl;
     box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
 }
 
