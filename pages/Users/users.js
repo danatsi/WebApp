@@ -7,7 +7,7 @@ angular.module('MyApp')
         $stateProvider.state('shell.users',{
             url: '/users',
             templateUrl:'./pages/Users/users.html',
-            controllr: 'UsersController'
+            controller: 'UsersController'
 
         })
 

@@ -1,24 +1,35 @@
 [{"userid": "123123123",
   "firstName" : "Eden" ,
   "lastName" : "B",
-    "password": "Eden1234"},
+  "password": "Eden1234",
+  "permission": "Admin"},
 
   {"userid": "205205205",
     "firstName" : "Dane" ,
     "lastName" : "Ts",
-    "password": "Dana1234"},
+    "password": "Dana1234",
+    "permission": "Admin"},
 
   {"userid": "205634645",
     "firstName" : "Noy" ,
     "lastName" : "Y",
-    "password": "Noy1234"},
+    "password": "Noy1234",
+    "permission": "Admin"},
 
   {"userid": "321321321",
     "firstName" : "Daniel" ,
     "lastName" : "Ts",
-    "password": "Daniel1234"},
+    "password": "Daniel1234",
+    "permission": "Admin"},
 
   {"userid": "111222333",
     "firstName" : "Bar" ,
     "lastName" : "L",
-    "password": "Bar1234"}]
+    "password": "Bar1234",
+    "permission": "Admin"},
+  
+    {"userid": "111222333",
+      "firstName" : "Gili" ,
+      "lastName" : "L",
+      "password": "Bar1234",
+      "permission": "Manager"}]
