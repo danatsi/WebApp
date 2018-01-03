@@ -16,10 +16,10 @@
     "password": "Noy1234",
     "permission": "Admin"},
 
-  {"userid": "321321321",
-    "firstName" : "Daniel" ,
-    "lastName" : "Ts",
-    "password": "Daniel1234",
+  {"userid": "312526585",
+    "firstName" : "Danielle" ,
+    "lastName" : "Z",
+    "password": "Dani1234",
     "permission": "Admin"},
 
   {"userid": "111222333",
@@ -28,7 +28,7 @@
     "password": "Bar1234",
     "permission": "Admin"},
   
-    {"userid": "111222333",
+    {"userid": "111222344",
       "firstName" : "Gili" ,
       "lastName" : "L",
       "password": "Bar1234",

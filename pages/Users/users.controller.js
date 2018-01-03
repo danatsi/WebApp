@@ -25,10 +25,7 @@ angular.module('MyApp').controller('UsersController', function($scope,$http,$mdE
 
     $http({
         method: "GET",
-        url: '../pages/authentication/data.json',
-        params: {
-            dataType: "json"
-        }
+        url: '../pages/authentication/user-data.json',
     }).then(function (response) {
         $scope.users = response.data;
         console.log(response);
