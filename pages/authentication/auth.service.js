@@ -70,7 +70,7 @@ angular.module('MyApp').factory('$auth', function ($q, $location,$http) {
                 {
                     currentUser = foundUser;
 
-                    $location.path("/login");
+                    $location.path("/home");
 
                     return resolve('Logged in!');
                 }
@@ -107,7 +107,7 @@ angular.module('MyApp').factory('$auth', function ($q, $location,$http) {
 
                      usersLoginData.push(user);
                     currentUser = user;
-                    $location.path("/home");
+                    $location.path("/login");
                     return resolve('Registered!');
 
 

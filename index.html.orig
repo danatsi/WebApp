@@ -1,0 +1,72 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html ng-app="MyApp" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- SCROLLS -->
+    <!-- load angular and angular route via CDN -->
+
+    <script src="./node_modules/angular/angular.js"></script>
+    <script src="./node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
+    <link rel="stylesheet" href="./node_modules/angular-material/angular-material.min.css">
+    <script src="./node_modules/angular-material/angular-material.js"></script>
+    <script src="./node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="./node_modules/angular-aria/angular-aria.min.js"></script>
+    <script src="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.3/angular-material.js"></script>
+
+
+    <!-- Material Design icon font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
+    <script type="text/javascript" src="./bower_components/angular-hamburglar/dist/hamburglar.js"></script>
+    <script type="text/javascript" src="./node_modules/angular-material-data-table/dist/md-data-table.js"></script>
+    <script type="text/javascript" src="./node_modules/angular-fixed-table-header/src/fixed-table-header.js"></script>
+    
+
+    <link rel="stylesheet" href="pages/home/home.css">
+    <link rel="stylesheet" href="pages/authentication/authentication.css">
+    <link rel="stylesheet" href="./bower_components/angular-hamburglar/dist/hamburglar.css">
+    <link rel="stylesheet" href="./node_modules/angular-material-data-table/dist/md-data-table.min.css">
+    <link rel="stylesheet" href="./pages/Students/students.css">
+
+    <script src="app.js"></script>
+    <script src="pages/authentication/auth.service.js"></script>
+    <script src="pages/shell/shell.js"></script>
+    <script src="pages/shell/sidenav/sidenav.controller.js"></script>
+    <script src="pages/shell/toolbar/toolbar.controller.js"></script>
+    <script src="pages/authentication/register/register.controller.js"></script>
+    <script src="pages/authentication/login/login.controller.js"></script>
+    <script src="pages/home/home.controller.js"></script>
+    <script src="pages/home/home.js"></script>
+    <script src="pages/students/students.controller.js"></script>
+    <script src="pages/users/users.controller.js"></script>
+    <script src="pages/users/users.js"></script>
+    <script src="pages/Students/students.js"></script>
+    <script src="pages/authentication/register/register.js"></script>
+
+    
+</head>
+<body style="direction: ltr; padding-right: 0px !important;">
+
+<ui-view style="display: flex; flex-direction: column; height: 100%; "></ui-view>
+<!--<header class="mdc-toolbar mdc-toolbar--fixed">
+    <div class="mdc-toolbar__row toolB" >
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+            <span class="mdc-toolbar__title">Classify!</span>
+        </section>
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
+            <a class="material-icons mdc-toolbar__icon" href="#/" aria-label="Home" >Home</a>
+            <a class="material-icons mdc-toolbar__icon" href="#/login" aria-label="Login">Login</a>
+            <a class="material-icons mdc-toolbar__icon" href="#/students" aria-label="students">students</a>
+            <a class="material-icons mdc-toolbar__icon" href="#/users" aria-label="users">users</a>
+        </section>
+    </div>
+</header>
+-->
+
+</body>
+</html>
