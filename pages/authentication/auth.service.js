@@ -70,7 +70,7 @@ angular.module('MyApp').factory('$auth', function ($q, $location,$http) {
                 {
                     currentUser = foundUser;
 
-                    $location.path("/home");
+                    $location.path("/login");
 
                     return resolve('Logged in!');
                 }
